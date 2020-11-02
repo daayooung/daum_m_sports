@@ -6,6 +6,7 @@
 # 구현사항
 
 ## HTML
+- 시멘틱 마크업
 - main page
 - side menu
 
@@ -21,4 +22,4 @@
 ### 날씨 API
 지역의 기상정보를 랜덤하게 보여주는 날씨 위젯
 
-### nav click & drag
+### 각 nav click & drag
