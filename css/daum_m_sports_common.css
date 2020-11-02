@@ -1,0 +1,974 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+KR:100,400,900&display=swap');
+
+
+/* reset */
+html {
+	font-size: 10px;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+body, button, input, select, td, textarea, th {
+	font-size: 15px;
+    line-height: 1.5;
+    font-family: HelveticaNeue-Light,AppleSDGothicNeo-Light,'Malgun Gothic','맑은 고딕',sans-serif;
+	color: #101010;
+	letter-spacing: -1px;
+}
+br	{
+	letter-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:1em;
+	font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
+	margin:0;
+	padding:0;
+}
+ul, ol {
+	list-style:none;
+}
+button, img {
+	border:0;
+}
+button {
+	border:0;
+	background: transparent;
+	outline: none;
+}
+table {
+	width:100%;
+	border-collapse:collapse;
+}
+table caption {
+	position:absolute;
+	top:0;left:-999999px;
+}
+a:link, a:visited {
+	color: black;
+	text-decoration:none;
+}
+a:hover {
+	color: black;
+	text-decoration:none;
+}
+select, textarea {
+	font:normal 1em '나눔고딕',nanumgothic,'돋움',dotum,AppleGothic, Arial, Verdana, sans-serif;
+	color:black;
+	vertical-align:middle;
+}
+input {
+	outline-style: none;
+	border: 0;
+    box-shadow: none;
+}
+input::-ms-clear, input::-ms-reveal{
+	display:none;width:0;height:0;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+	display:none;
+}
+strong, em {
+	font-style: normal;
+	font-weight: normal;
+}
+/* 모바일 퍼스트 */
+/* layout */
+.wrap {
+	background-color: #f4f4f4;
+	overflow: hidden;
+}
+.wrap > main {
+	position: relative;
+}
+.wrap > main > .col2 {
+	overflow: hidden;
+}
+.clearfix:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+/* common */
+h3 {
+	min-height: 45px;
+	padding: 8px 15px 0;
+	box-sizing: border-box;
+    font-size: 1.13em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+main em {
+	color: #118eff;
+}
+a.more {
+    min-height: 42px;
+    margin: 0 15px;
+	padding: 11px 0;
+	box-sizing: border-box;
+	display: block;
+    font-size: .93em;
+    color: #888;
+	text-align: right;
+}
+a.more > .icon {
+	width: 6px;
+    height: 10px;
+	margin: 6px 0 0 5px;
+	display: inline-block;
+	background: url('../images/ico_mtg_200120.png');
+    background-position: -125px -205px;
+    text-align: left;
+    vertical-align: top;
+}
+.screen_out {
+    position: absolute;
+	text-indent: -9999px;
+}
+main ul.thumb {
+	margin-bottom:9px;
+	padding: 15px 11px 0;
+	font-size: 0;
+	overflow: hidden;
+}
+main ul.thumb > li {
+	width: 50%;
+	padding: 0 4px;
+	display: inline-block;
+	font-size: 15px;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+/* Q li높이가 달라질 때 제대로 정렬이 되지 않아서
+ 	li에 display: inline-block;, ul에 font-size: 0; 준 상태. 그런데 여전히 아래 li가 떨어진다.*/
+main ul.thumb > li > a {
+	width: 100%;
+}
+main ul.thumb > li > a > * {
+	display: block;
+}
+main ul.thumb > li > a > img {
+	width: 100%;
+	height: auto;
+	border-radius: 2px;
+}
+
+main ul.thumb > li > a > span {
+	margin: 0 auto 4px;
+	padding: 6px 12px 0 1px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+main ul.text {
+	padding: 0 15px;
+}
+main ul.text > li {
+	overflow: hidden;
+    width: 100%;
+	min-height: 41px;
+	border-top: 1px solid #f6f6f6;
+}
+main ul.text > li > a {
+	min-height: 18px;
+	padding: 11px 2px;
+	display: block;
+	overflow: hidden;
+	font-size: 1.07em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+main  div {
+	position: relative;
+}
+main  div > a.more.more_absol {
+	width: auto;
+	display: block;
+	position: absolute;
+    top: 3px;
+    right: 2px;
+    color: rgba(0,0,0,.47);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* header */
+header {
+	padding: 15px 15px 0;
+	margin-bottom: 9px;
+	background-color: #fff;
+}
+header > .search {
+	width: 100%;
+	height: 47px;
+	margin-bottom: 10px;
+    border-radius: 10px;
+    border:2px solid #FBDD0D;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+header > .search > h1 {
+	position: absolute;
+    top: -2px;
+    left: 0;
+}
+header > .search > h1 > a > img {
+	width: 58px;
+	height: 47px;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+header > .search input {
+	width: 85%;
+    height: 22px;
+	margin-top: 11px;
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 50px;
+    font-size: 17px;
+    color: #101010;
+}
+header > .search > button.search_btn {
+	height: 22px;
+	width: 28px;
+	display: inline-block;
+	position: absolute;
+	top: 13px;
+	right: 0px;
+}
+header > .search button.search_btn > span {
+	width: 17px;
+	height: 17px;
+	font-size: 0;
+	display: inline-block;
+	position: absolute;
+	top: 1px;
+	right: 7px;
+	background-image: url('../images/ico_1.png');
+	background-position: -20px -60px;
+}
+header > .weather {
+	height: 34px;
+	position: relative;
+	overflow: hidden;
+}
+header > .weather > ul {
+	width: 800px;
+	padding-right: 60px;
+}
+header > .weather a.wt_left {
+	padding-right: 10px;
+}
+header > .weather li span {
+	vertical-align: top;
+}
+header > .weather li a span.wt_icon > img {
+	width: 23px;
+	height: 23px;
+	display: inline-block;
+	background: white;
+}
+header > .weather > a.btn_location {
+	padding-left: 8px;
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+header > .weather > a.btn_location > span {
+	padding-left: 18px;
+	background: url('../images/ico_mtg_200120.png')14px 14px;
+	background-position: -60px 2px;
+	font-size: 14px;
+    color: #888;
+    vertical-align: top;
+}
+/* main */
+main > nav {
+	position: relative;
+}
+main > nav > .slide_menu {
+	width: 100%;
+	height: 45px;
+	padding-left: 6px;
+    border-bottom: 1px solid #E0E0E0;
+	background-color: #fff;
+	position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all 0.2s;
+    will-change: transform;
+    user-select: none;
+}
+main > nav > .slide_menu::-webkit-scrollbar {
+	display:none;
+}
+main > nav > .slide_menu.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+main > nav::before {
+	content: '';
+	height: 45px;
+	width: 15px;
+	background: linear-gradient(to left,rgba(255, 255, 255, 0) 0,rgb(255, 255, 255, 1) 40%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+main > nav::after {
+	content: '';
+	height: 45px;
+	width: 15px;
+	background: linear-gradient(to right,rgba(255,255,255,0) 0,rgb(255, 255, 255, 1) 24%);
+	position: absolute;
+	top: 0;
+	right: 48px;
+}
+main > nav > .slide_menu> h2 {
+	position: absolute;
+	font-size: 0;
+}
+main > nav > .slide_menu > ul {
+	height: 46px;
+	overflow: hidden;
+	overflow-x: auto;
+	position: relative;
+	float: left;
+}
+main > nav > .slide_menu > ul > li {
+	display: inline-block;
+    position: relative;
+    height: 45px;
+    padding-right:1px;
+    font-weight: 700;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+main > nav > .slide_menu > ul > li > a {
+	padding: 12px 7px 10px 8px;
+	font-size: 16px;
+	box-sizing: border-box;
+	display: block;
+	text-align: center;
+	position: relative;
+}
+main > nav > .slide_menu > ul > li > a:active{
+    border-radius: 2px;
+	border-bottom: 1px solid black;
+	margin-top: -2px;
+}
+main > nav > a.btn_menu {
+	width: 48px;
+	height: 45px;
+	background-color: #fff;
+	position: absolute;
+	top:0;
+	right: 0;
+	font-size: 0;
+}
+main > nav > a.btn_menu > span {
+	width: 26px;
+	height: 26px;
+	display: block;
+	margin: 10px 12px;
+	box-sizing: border-box;
+	background: url('../images/ico_mtg_200120.png') no-repeat;
+	background-position: 0 -185px;
+}
+main > nav span.nav_border {
+	position: absolute;
+	display: block;
+	border-bottom: 2px solid black;
+}
+/* side_menu */
+.side_menu {
+	/* z-index: 100;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0px; */
+}
+.side_menu.on {
+	display: block;
+}
+.side_menu .wrap_side {
+	position: fixed;
+    top: 0;
+	z-index: 200;
+	width: 360px;
+    height: 100%;
+	background-color: #fff;
+	right: -360px;
+	transition: all 0.5s ease-in-out;
+}
+.side_menu.on .wrap_side {
+    right: 0;
+}.wrap_side img {
+	vertical-align: top;
+}
+.util_side {
+	width: 360px;
+	position: fixed;
+	right: 0px;
+	right: -360px;
+    bottom: 0;
+    z-index: 300;
+    padding: 10px 20px;
+    background-color: #fff;
+	box-shadow: 0 -4px 10px 0 rgba(0,0,0,.03);
+	box-sizing: border-box;
+	transition: all 0.5s ease-in-out;
+}
+.side_menu.on .util_side {
+    right: 0;
+}
+.ico_mtg {
+    background: url('../images/ico_mtg_side.png') no-repeat;
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+.util_side > a.homeedit > span.ico_mtg{
+    background-position: 0 -40px;
+    float: left;
+    margin-right: 20px;
+}
+.util_side > a.fontedit > span.ico_mtg{
+    background-position: -30px -40px;
+    float: left;
+    margin-right: 20px;
+}
+.util_side > a.login {
+	float: left;
+	margin-left: 165px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+.util_side > a.login > span.ico_mtg{
+    margin-right: 4px;
+    background-position: -90px -40px;
+    float: left;
+}
+.cont_side {
+	overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    height: 100%;
+    padding: 0 15px 75px;
+    background-color: #fff;
+    box-sizing: border-box;
+    letter-spacing: -1px;
+}
+.cont_side::-webkit-scrollbar {
+	display:none;
+}
+.info_user {
+	overflow: hidden;
+    position: relative;
+    padding: 15px 5px 13px;
+}
+.info_user img {
+    width: 53px;
+	height: 53px;
+	border-radius: 20px;
+	vertical-align: top;
+	float: left;
+}
+.info_user strong {
+	max-width: 220px;
+	padding-top: 13px;
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 19px;
+    color: #101010;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+	vertical-align: middle;
+	float: left;
+}
+.info_commu > ul {
+	overflow: hidden;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+}
+.info_commu li {
+	float: left;
+	position: relative;
+	width: 50%;
+	height: 43px;
+	text-align: center;	
+}
+.info_commu li + li:after {
+	position: absolute;
+    left: 0;
+    top: 14px;
+    width: 1px;
+    height: 15px;
+    background-color: #E5E5E5;
+    content: '';	
+}
+.info_commu a {
+	display: block;
+	padding: 8px 0 10px;
+	font-size: 16px;
+	color: #000;	
+}
+.info_recomm {
+	overflow: hidden;
+    margin: 0 -8px;
+    padding: 20px 0 1px;
+}
+.info_recomm li {
+	float: left;
+    width: 25%;
+    padding-bottom: 15px;
+    text-align: center;	
+}
+.info_recomm img {
+	display: block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    border-radius: 20px;	
+}
+.info_recomm span {
+	display: block;
+	margin-top: 5px;
+	font-size: 13px;
+	color: #333;	
+}
+.info_notice {
+	overflow: hidden;
+    padding: 23px 0;
+	line-height: 20px;
+	border-top: 1px solid #f6f6f6;
+}
+.info_notice h3 {
+	float: left;
+	padding-top: 0;
+    font-weight: 700;
+    font-size: 16px;
+}
+.info_notice span {
+	/* overflow: hidden; */
+    float: left;
+    max-width: 222px;
+    padding-right: 5px;
+    font-size: 16px;
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
+    color: #333;
+}
+.btn_close {
+	display: block;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    background: 0 0;
+}
+.btn_close > span {
+	font-size: 0;
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: 0 auto;
+	background-position: -165px -40px;
+}
+.side_menu.on .light_box{
+	display:block;
+}
+.light_box {
+	display:none;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 100%;
+    background-color: rgba(0,0,0,.7);
+	transition: background-color .3s;	
+}
+
+main > .col2 > .col1 > * {
+	background-color: #fff;
+}
+main > .col2 > .col1 > .banner_small {
+	overflow: hidden;
+	width: 100%;
+	height: 100px;
+	margin-bottom: 9px;
+	background: #bc691b;
+}
+main > .col2 > .col1 > .banner_small > a {
+	height: 100%;
+}
+main > .col2 > .col1 > .banner_small > a > img {
+	height: 100%;
+	display:block;
+	margin: 0 auto;
+}
+main div.type0 {
+	/* width: 812px; */
+	position: relative;
+}
+main ul.type {
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 9px;	
+	position: relative;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	will-change: transform;
+	cursor: pointer;
+}
+main ul.type::-webkit-scrollbar {
+	display:none;
+}
+main ul.type.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+main ul.type > li {
+    width: 62px;
+	display: inline-block;
+	border: 1px solid #f2f2f2;
+    background-color: #fff;
+}
+main ul.type > li + li {
+	margin-left: 4px
+}
+main ul.type > li > a > img {
+	width: 62px;
+	height: 40px;
+}
+main ul.type > li > a > span {
+	min-height: 16px;
+    height: auto;
+    margin-bottom: 6px;
+	padding: 3px 4px 0;
+    font-size: .8em;
+	text-align: center;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+
+main > .col2 > .col1 > .banner_big {
+	overflow: hidden;
+	min-width: 320px;
+	height: auto;
+	margin-bottom: 9px;
+	position: relative;
+}
+main > .col2 > .col1 > .banner_big > a > img {
+	width: 100%;
+	display: block;
+}
+main > .col2 > .col1 > .banner_big > a > .bantext {
+	height: 40%;
+	background: linear-gradient(rgba(0, 0, 0, 0))0%, rgba(0, 0, 0, 0.36)100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+main > .col2 > .col1 > .banner_big > a > .bantext > strong {
+	position: absolute;
+	left: 8px;
+	bottom: 15px;
+	overflow: hidden;
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+main > .col2 > .col1 > .banner_big > a > .bantext > em{
+	position: absolute;
+	right: 8px;
+	bottom: 15px;
+	height: 21px;
+	padding: 1px 7px 0;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-radius: 2px;
+	background-color: rgba(0, 0, 0, 0.1);
+	font-size: 12px;
+	color: rgb(255, 255, 255);
+}
+main > .col2 > .col1 > ul.planlank {
+	overflow: hidden;
+	margin-bottom: 9px;
+}
+main > .col2 > .col1 > ul.planlank > li {
+	float: left;
+	width: 25%;
+	padding: 0 4px;
+	box-sizing: border-box;
+    text-align: center;
+}
+main > .col2 > .col1 > ul.planlank > li + li {
+	border-left: 1px solid rgb(230, 230, 230);
+}
+main > .col2 > .col1 > ul.planlank > li > a {
+    min-height: 18px;
+	padding: 7px 0;
+	display: block;
+    overflow: hidden;
+    font-weight: 200;
+    color: #555;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+}
+main > .col2 > .col1 > .themesports > ul.soccbas{
+	overflow: hidden;
+}
+main > .col2 > .col1 > .themesports > ul.soccbas > li {
+	float: left;
+	width: 20%;
+	position: relative;
+}
+main > .col2 > .col1 > .themesports > ul.soccbas > li:after {
+	content: '';
+	width: 1px;
+	height: 14px;
+	display: block;
+    background-color: rgb(220, 220, 220);
+	position: absolute;
+    right: -1px;
+    top: 16px;
+}
+main > .col2 > .col1 > .themesports > ul.soccbas > li > a {
+	display: block;
+    padding: 11px 3px 11px 4px;
+    font-size: 16px;
+    font-family: 'Helvetica Neue',AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',sans-serif;
+    color: #888;
+    text-align: center;
+    white-space: nowrap;
+}
+main > .col2 > .col1 > .hightlight {
+	margin-bottom: 8px;
+	box-sizing: border-box;
+}
+main > .col2 > .col1 > .hightlight > ul {
+	padding: 0 15px;
+}
+main > .col2 > .col1 > .hightlight > ul > li {
+	padding: 7px 0;
+	border-top: 1px solid #e2e2e2;
+}
+main > .col2 > .col1 > .hightlight > ul > li > a {
+	display: table;
+    overflow: hidden;
+    width: 100%;
+    min-height: 50px;
+    table-layout: fixed;
+}
+main > .col2 > .col1 > .hightlight > ul > li > a > .img_wrap {
+	display: table-cell;
+    width: 36.4%;
+	box-sizing: border-box;
+	position: relative;
+}
+main > .col2 > .col1 > .hightlight > ul > li > a > .img_wrap > img {
+	width: 100%;
+	border-radius: 2px;
+	display: block;
+}
+main > .col2 > .col1 > .hightlight > ul > li > a > .img_wrap > span.play_count {
+    padding: 3px 6px;
+	border-radius: 2px;
+	background-color: rgba(32,32,32,.6);
+	display: block;
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: .73em;
+    line-height: 1.16;
+    color: #fff;
+    letter-spacing: -.05em;
+}
+main > .col2 > .col1 > .hightlight > ul > li > a > .img_wrap > span.play_count > span {
+	width: 6px;
+	height: 8px;
+	display: inline-block;
+    margin: 3px 3px 0 0;
+	background: url('../images/ico_mtg_200120.png') no-repeat;
+	background-position: -250px -115px;
+}
+main > .col2 > .col1 > .hightlight > ul > li > a > .contents {
+	display: table-cell;
+    width: 63.6%;
+    padding: 0 10px 0 14px;
+    font-size: 1.07em;
+    letter-spacing: -1px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+main > .col2 > .col1 > .hightlight > ul > li > a > .contents > .webkit {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+main > .col2 > .col1 > .hightlight > ul > li > a > .contents > .webkit > em {
+	padding-right: 8px;
+}
+main > .col2 > .col1 > .popnews em {
+    min-width: 14px;
+    padding-right: 6px;
+    font-weight: 400;
+    color: #118eff;
+    text-align: center;
+}
+main > .col2 > .col1 > .visitsport {
+	position: relative;
+}
+main > .col2 > .col1 > .visitsport > a.fold_btn {
+	width: 45px;
+	min-height: 45px;
+	position: absolute;
+    top: 0;
+	right: 1px;
+	font-size: 0;
+}
+main > .col2 > .col1 > .visitsport > a.fold_btn > span {
+	width: 17px;
+	height: 9px;
+	margin: 16px 0 0 13px;
+	display: block;
+	background: url('../images/ico_mtg_200120.png') no-repeat;
+	background-position: -115px -195px;
+}
+main > .page {
+	display: none;
+}
+/* footer */
+
+footer {
+	width: 100%;
+	height: 137px;
+	padding: 25px 0 39px;
+	box-sizing: border-box;
+	text-align: center;
+	clear: both;
+}
+footer > ul.foot_list {
+	height: 28px;
+	margin: 0 auto 10px;
+	font-size: 0;
+}
+footer > ul.foot_list > li {
+	padding-left: 3px;
+	display: inline-block;
+}
+footer > ul.foot_list > li > a {
+    width: 64px;
+	height: 26px;
+	padding-top: 5px;
+	border: 1px solid #E0E0E0;
+	display: block;
+	background-color: #FCFCFC;
+    font-size: 13px;
+    color: #101010;
+}
+footer > .foot_info a {
+	margin: 0 6px;
+	font-size: 12px;
+	line-height: 15px;
+    letter-spacing: -.075em;
+	color: #888;
+}
+footer > .foot_info > ul.foot_policy > li {
+	display: inline-block;
+	position: relative;
+}
+footer > .foot_info > ul.foot_policy > li + li::after {
+	content: '';
+    width: 1px;
+    height: 10px;
+    background-color: rgb(205, 205, 205);
+	position: absolute;
+	top: 7px;
+	left: -3px;
+}
+footer > .foot_info > ul.foot_policy > li > a > em {
+	font-weight: 700;
+}
+/* 767이상 */
+@media screen and (min-width: 768px) {
+	main > .col2::after {
+		content: '';
+		width: 1px;
+		height: 100%;
+		background-color: #e9e9e9;
+		position: absolute;
+		top: 0;
+		left: 50%;
+	}
+	main > .col2 > .col1 {
+		float: left;
+		width: 50%;
+	}
+	main > .page {
+		display: block;
+		min-width: 134px;
+		height: 39px;
+		padding-top: 12px;
+		border-top: 1px solid #e6e6e6;
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+		position: relative;
+	}
+	main > .page   a.page_btn {
+		width: 48px;
+		height: 100%;
+		display: block;
+		position: absolute;
+		top: 0;
+	}
+	
+	main > .page a.prev {
+		left: 0;
+	}
+	main > .page a.next {
+		right: 0;
+	}
+	main > .page a.page_btn > span {
+		width: 10px;
+		height: 16px;
+		margin: 18px auto;
+		display: block;
+		font-size: 0;
+		background: url('../images/ico_mtg_200120.png') no-repeat;
+	}
+	main > .page a.prev > span {
+		background-position: -250px -140px;
+	}
+	main > .page a.next > span {
+		background-position: -250px -160px;
+	}
+}/* 767이상 end */

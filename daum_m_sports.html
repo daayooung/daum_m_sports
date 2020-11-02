@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>daum_sports</title>
+	<link rel="stylesheet" media="all" href="css/daum_m_sports_common.css" />
+	<style></style>
+	<script src = "js/main.js"></script>
+	<script src = "js/weather_r.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<div class="search">
+				<h1><a href=""><img src="images/20200325101321880.png"/></a></h1>
+				<input class="keyword" type="text" placeholder="사회적 거리두기" >		
+				<button type="submit" class="search_btn" name="click"><span>검색</span></button>  
+			</div>
+			<div class="weather clearfix">
+				<ul>
+					<li>
+						<a class="wt_left" href="" >
+							<span class="wt_icon"><img src="images/ico_weather_w.png"></span>
+							<span class="wt_local"></span>
+							<span class="wt_temp"></span>
+							<span class="wt_celsius">°C</span>
+						</a>
+						<a class="wt_right" href="">
+							<span class="wt_icon"><img src="images/ico_weather_w.png"></span>
+							<span class="wt_local"></span>
+							<span class="wt_temp"></span>
+							<span class="wt_celsius">°C</span>
+						</a>
+					</li>
+				</ul>
+				<a class="btn_location" href=""><span>현위치</span></a>
+			</div>		
+		</header>
+		<main>
+			<nav>
+				<div class="slide_menu">
+					<h2>메뉴</h2>
+					<ul>
+						<li><a class="item" href="">MY피드</a></li>
+						<li><a class="item" href="">뉴스</a></li>
+						<li><a class="item" href="">랭킹</a></li>
+						<li><a class="item" href="">연예</a></li>
+						<li><a class="item" href="">TV</a></li>
+						<li><a class="item" href="">쇼핑</a></li>
+						<li><a class="item" href="">스포츠</a></li>
+						<li><a class="item" href="">머니</a></li>
+						<li><a class="item" href="">홈&쿠킹</a></li>
+						<li><a class="item" href="">동물</a></li>
+						<li><a class="item" href="">스타일</a></li>
+						<li><a class="item" href="">자동차+</a></li>
+						<li><a class="item" href="">여행맛집</a></li>
+						<li><a class="item" href="">직장IN</a></li>
+						<li><a class="item" href="">펀&웹툰</a></li>
+					</ul>
+					<span class="nav_border"></span>
+				</div>
+				<a class="btn_menu" href=""><span>메뉴</span></a>
+				<div class = "side_menu">
+					<div class = "wrap_side">
+						<h2 class = "screen_out">다음 사이드메뉴</h2>
+						<div class = "util_side">
+							<a href = "https://m.daum.net/tabs/setting" class = "homeedit">
+								<span class = "ico_mtg"></span>
+							</a>
+							<a href = "" class = "fontedit">
+								<span class = "ico_mtg"></span>
+							</a>
+							<a href = "https://logins.daum.net/accounts/loginform.do?status=-401&url=https%3A%2F%2Fm.daum.net%3Fnil_rc%3DIEmrt8" class = "login">
+								<span class = "ico_mtg"></span>로그인
+							</a>
+						</div>
+						<div class= "cont_side">
+							<div class = "info_user">
+								<h3 class = "screen_out">사용자정보</h3>
+								<a href = "https://logins.daum.net/accounts/loginform.do?status=-401&url=https%3A%2F%2Fm.daum.net%3Fnil_rc%3DKZXd2c">
+									<span><img src = "images/user.png" alt = "프로필사진"></span>
+									<strong>로그인 하세요</strong>
+								</a>
+							</div>
+							<div class = "info_commu">
+								<h3 class = "screen_out">커뮤니케이션 서비스</h3>
+								<ul>
+									<li><a href="https://logins.daum.net/accounts/loginform.do?status=-401&url=http%3A%2F%2Fm.mail.daum.net%2Fhanmailex%2Fmobile%2Fbasic%2FTop.daum">메일</a></li>
+									<li><a href="https://m.cafe.daum.net/?t__nil_gnb=home">카페</a></li>
+								</ul>
+							</div>
+							<div class = "info_recomm">
+								<h3 class = "screen_out">추천 서비스</h3>
+								<ul>
+									<li><a href = "https://brunch.co.kr/"><img class = "thumb_recomm" src = "images/20190925103115554.png"><span class = "txt_recomm">브런치</span></a></li>
+									<li><a href = "https://www.tistory.com/m/"><img class = "thumb_recomm" src = "images/20190919043913442.png"><span class = "txt_recomm">티스토리</span></a></li>
+									<li><a href = "http://m.finance.daum.net/myfeed"><img class = "thumb_recomm" src = "images/20190919043926640.png"><span class = "txt_recomm">금융</span></a></li>
+									<li><a href = "https://m.realty.daum.net/"><img class = "thumb_recomm" src = "images/20190919043931352.png"><span class = "txt_recomm">부동산</span></a></li>
+									<li><a href = "http://m.webtoon.daum.net/m/"><img class = "thumb_recomm" src = "images/20190919043935856.png"><span class = "txt_recomm">웹툰</span></a></li>
+									<li><a href = "https://auto.daum.net/"><img class = "thumb_recomm" src = "images/20190919043940464.png"><span class = "txt_recomm">자동차</span></a></li>
+									<li><a href = "https://accounts.kakao.com/login/kakaostory"><img class = "thumb_recomm" src = "images/20191007110856923.png"><span class = "txt_recomm">카카오스토리</span></a></li>
+									<li><a href = "https://accounts.kakao.com/login/kakaostory"><img class = "thumb_recomm" src = "images/20190919043951149.png"><span class = "txt_recomm">카카오맵</span></a></li>
+									<li><a href = "https://e.kakao.com/?referer=m_top"><img class = "thumb_recomm" src = "images/20190919043958668.png"><span class = "txt_recomm">이모티콘샵</span></a></li>
+									<li><a href = "https://dic.daum.net/index.do"><img class = "thumb_recomm" src = "images/20190923022557970.png"><span class = "txt_recomm">다음사전</span></a></li>
+									<li><a href = "http://m.blog.daum.net/"><img class = "thumb_recomm" src = "images/20190923022955095.png"><span class = "txt_recomm">블로그</span></a></li>
+									<li><a href = "https://m.daum.net/site.daum?tab=app"><img class = "thumb_recomm" src = "images/20190919044003578.png"><span class = "txt_recomm">전체서비스</span></a></li>
+								</ul>
+							</div>
+							<div class = "info_notice">
+								<a href = "https://m.daum.net/channel/new/notice"><h3 class = "tit_notice">공지사항</h3></a>
+								<a href = "https://m.daum.net/channel/new/notice/view/5e9fd9021fde152dc3c4b2b2?title=%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4+%EC%B2%98%EB%A6%AC%EB%B0%A9%EC%B9%A8+%EA%B0%9C%EC%A0%95+%EC%95%88%EB%82%B4&date=2020-04-22"><span class = "txt_notice">개인정보  처리방침 개정 안내</span></a>
+							</div>
+							<button class = "btn_close" type="button">
+								<span class = "ico_mtg">다음 사이드메뉴 닫기</span>
+							</button>
+						</div>
+					</div>
+					<div class = "light_box"></div>
+				</div>
+			</nav>
+			<div class="col2">
+				<div class="col1">
+					<ul class="mainsports1 thumb">
+						<li>
+							<a href="">
+								<img src="images/download22.jpeg">
+								<span>K리그 흥행을 위한 프로축구연맹의 몸부림</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/download26.jpeg">
+								<span>삼성의 외인 투수 악몽, 뷰캐넌은 다를까?[케이비리포트]</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="subsports1 text">
+						<li><a href="">이상규 147km, 김민성 홈런..백팀 타자일순 대승[잠실 게임노트]</a></li>
+						<li><a href="">1군 압도한 롯데 2군들의 의욕, 허문회 감독 앞에서 무력시위 [오!쎈 부산]</a></li>
+						<li><a href="">퍼디난드, "퍼거슨이 대표팀서 45분 이상 뛰면 죽여버린다 했어"</a></li>
+						<li><a href="">코로나19, MLB 연봉, 그리고 서비스타임</a></li>
+						<li><a href="">'이건욱 가능성+이현석 장타쇼' SK 퓨처스팀, 1군 형님 완파[인천 게임노트]</a></li>
+					</ul>
+					<div class="banner_small">
+						<a href="">
+							<img src="images/f95d166ab19036382bddd136ad608f64.jpg">
+						</a>
+					</div>
+					<div class = type0>
+						<ul class="type">
+							<li>
+								<a href="">
+									<img src="images/20160810071403403.png">
+									<span>스포츠홈</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/20160810071424081.png">
+									<span>축구</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/20160810071431187.png">
+									<span>해외축구</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/7af50b9660764f7383d443101d5e79c0.png">
+									<span>EPL봇</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/20160810071411060.png">
+									<span>야구</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/20160810071417232.png">
+									<span>해외야구</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/20160810071444917.png">
+									<span>농구/배구</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/20160810071436391.png">
+									<span>골프</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/20160810071449622.png">
+									<span>일반</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/20160810071455740.png">
+									<span>e-스포츠</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/20160810071500591.png">
+									<span>칼럼/카툰</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="images/20160810071505546.png">
+									<span>중계/스코어</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- <div class="live">
+						<a href="">
+							<h3>스포츠 생중계</h3>
+							<div class="live_thumb">
+								<img src="images/bab33d2af3a50156_ss.jpg">
+								<strong class="clip"></strong>
+								<span class="Play_count">1486</span>
+							</div>
+							<em></em>
+							<span></span>
+						</a>
+					</div> -->
+					<ul class="mainsports2 thumb">
+						<li><a href="">
+							<img src="images/download39.jpeg">
+							<span>길거리 투구, 맨발의 왼손 포수..MLB 이색 훈련법 '화제'</span>
+						</a></li>
+						<li><a href="">
+							<img src="images/download38.jpeg">
+							<span>'명장' 안첼로티 감독이 뽑은 올타임 베스트11, 호날두가 없다</span>
+						</a></li>
+					</ul>
+					<ul class="subsports2 text">
+						<li>
+							<a href="">
+							<strong>日 언론 "올림픽 결국 혹서기로 연기..선수 퍼스트는 거짓말"</strong>
+						</a></li>
+						<li><a href="">
+							<strong>이다영 "별은 놓쳤지만..나는 새싹, 더 성장할 것이라 믿는다"</strong>
+						</a></li>
+						<li><a href="">
+							<strong>"드록바-아넬카 불화가 내 첼시 커리어 망쳤어" 스콜라리의 회상</strong>
+						</a></li>
+						<li><a href="">
+							<strong>올림픽 연기 후 코로나 급증한 日..육상 메달리스트도 양성, 90여명과 접촉</strong>
+						</a></li>
+						<li><a href="">
+							<strong>'최고령 2루수' 정근우의 도전은 새벽 출근부터</strong>
+						</a></li>
+					</ul>
+					<ul class="mainsports3 thumb">
+						<li><a href="">
+							<img src="images/download100.png">
+							<span>'장발' 메시, '포니테일' 디발라.. 파트너와 헤어스타일 바꾼 사진 화제</span>
+						</a></li>
+						<li><a href="">
+							<img src="images/download101.jpeg">
+							<span>의사로 변신해 슛 대신 코로나 막는 네덜란드 하키 금메달리스트</span>
+						</a></li>
+					</ul>
+					<div class="banner_big">
+						<a href="">
+							<img src="images/download20.jpeg">
+							<div class="bantext">
+								<strong>기회는 지금! 1+1일 때 구매하세요</strong>
+								<em>알아보기</em>
+							</div>
+						</a>
+					</div>
+					<ul class="subsports3 text">
+						<li>
+							<a href="">
+							<strong>서울 유상훈, PK 절반이상 막은 유일한 GK.. 노상래 성공률 100%</strong>
+						</a></li>
+						<li><a href="">
+							<strong>"류현진 얻을 수 있었는데.." MIN, 구단 10년간 최악 트레이드</strong>
+						</a></li>
+						<li><a href="">
+							<strong>천재의 세 번째 도전! 1루수 강백호, 이강철의 꽃놀이패 될까</strong>
+						</a></li>
+						<li><a href="">
+							<strong>"2019 포스트시즌, 다른 공 사용됐다" 과학자 주장</strong>
+						</a></li>
+						<li><a href="">
+							<strong>'코로나 기간 ML 일당 4775달러'..콜-트라웃 2개월치 선급금은?</strong>
+						</a></li>
+					</ul>
+					<ul class="themelist planlank">
+						<li><a href="">해외축구 일정</a></li>
+						<li><a href="">EPL 순위</a></li>
+						<li><a href="">NBA 순위</a></li>
+						<li><a href="">KBL 일정</a></li>
+					</ul>
+					<ul class="mainsports4 thumb">
+						<li><a href="">
+							<img src="images/download39.jpeg">
+							<span>길거리 투구, 맨발의 왼손 포수..MLB 이색 훈련법 '화제'</span>
+						</a></li>
+						<li><a href="">
+							<img src="images/download38.jpeg">
+							<span>'명장' 안첼로티 감독이 뽑은 올타임 베스트11, 호날두가 없다</span>
+						</a></li>
+					</ul>
+					<ul class="subsports4 text">
+						<li><a href="">골프 다이제스트가 주목한 이정은6의 독특한 그린 읽는 법</a></li>
+						<li><a href="">주전 후보로 우뚝, KIA 김호령 "수비+타격 다 잘하고싶다"</a></li>
+						<li><a href="">마스크 쓰고 손 씻고..대만 프로야구의 '개막 독자노선'</a></li>
+						<li><a href="">'보스턴이 첫 희생자였을텐데' 무산된 류현진의 토론토 개막전 아쉬움</a></li>
+						<li><a href="">'올림픽 연기' 한국축구, U-23 운영 이원화?..김학범 체제 도쿄로</a></li>
+					</ul>
+				</div>
+				<div class="col1">
+					<ul class="mainsports5 thumb">
+						<li><a href="">
+							<img src="images/download7.png">
+							<span>지예흐 첼시 이적 미리 알았던 K리거?</span>
+						</a></li>
+						<li><a href="">
+							<img src="images/download8.png">
+							<span>우드의 특징 분석, 제대로 알고 치자 [박진이 레슨]</span>
+						</a></li>
+						<li><a href="">
+							<img src="images/download24.jpeg">
+							<span>벙커샷이 어려운 이유와 땅에 클럽을 대면 벌타인 이유</span>
+						</a></li>
+						<li><a href="">
+							<img src="images/download25.jpeg">
+							<span>KIA 양현종 메이저리그 도전, 이범호의 생각은? | 믈착캠</span>
+						</a></li>
+					</ul>
+					<div class="themesports">
+						<h3>종목별 뉴스</h3>
+						<ul class="soccbas">
+							<li>
+								<a href="">축구</a>
+							</li>
+							<li>
+								<a href=""><em>해외축구</em></a>
+							</li>
+							<li>
+								<a href="">야구</a>
+							</li>
+							<li>
+								<a href="">해외야구</a>
+							</li>
+							<li>
+								<a href="">일반</a>
+							</li>
+						</ul>
+						<ul class="text">
+							<li><a href="">'자가격리' 이승우, "모두 어려운 한 해.. 기회 될수도"</a></li>
+							<li><a href="">사려 깊은 손흥민, 사인 유니폼 경매로 영국 어린이 병원 돕는다</a></li>
+							<li><a href="">'폭탄 발언' 케인, 토트넘 떠나면 '시장가치 2033억'.. 손흥민 1084억</a></li>
+							<li><a href="">레알=바르사=첼시, 스페인 19세 MF 영입 삼파전</a></li>
+							<li><a href="">[엠스플 탐사] 'EPL 취재 사기의혹' 폭로한 축구기자..거액 소송전에 휘말렸다</a></li>
+							<a class="more" href="">해외축구 뉴스 더보기<div class="icon"></div></a>	
+						</ul>
+					</div>
+					<ul class="recommshop thumb">
+						<li><a href="">
+							<img src="images/download21.jpeg">
+							<span>[주문폭주]인기 브랜드 언더셔츠 6장세트 35,500원!~</span>
+						<li><a href="">
+							<img src="images/download16.jpeg">
+							<span>'태양을 피하고 싶었어' 언더아머 모자 최대 44% 특가세일</span>
+						</a></li>
+						<li><a href="">
+							<img src="images/download103.jpeg">
+							<span>남자도 레깅스! 아디다스/나이키 레깅스 신상 국내 최저가</span>
+						</a></li>
+						<li><a href="">
+							<img src="images/download30.jpeg">
+							<span>나이키,푸쉬업 세트 최대62% 초특가세일!</span>
+						</a></li>
+					</ul>
+					<div class="hightlight">
+						<h3><a href="">인기 하이라이트</a></h3>
+						<ul>
+							<li><a href="">
+								<div class="img_wrap">
+									<img src="images/download15.jpeg">
+									<span class="play_count"><span></span>151,772</span>
+								</div>
+								<div class="contents">
+									<strong class="webkit">
+									<em>국내야구 기타</em>[한화 청백전] 유장혁에게 사과를 건내는 윤규진
+								</strong>
+								</div>
+							</a></li>
+							<li><a href="">
+								<div class="img_wrap">
+									<img src="images/download33.jpeg">
+									<span class="play_count"><span></span>97,931</span>
+								</div>
+								<div class="contents">
+									<strong class="webkit">
+									<em>국내야구 기타</em>[두산 청백전] '미래가 밝은 핫코너' 멋진 수비를 보여주는 이유찬
+								</strong>
+								</div>
+							</a></li>
+							<li><a href="">
+								<div class="img_wrap">
+									<img src="images/download34.jpeg">
+									<span class="play_count"><span></span>65,475</span>
+								</div>
+								<div class="contents">
+									<strong class="webkit">
+									<em>국내야구 기타</em><span>[한화 청백전 HL] 3월 29일 청백전</span> 
+									</strong>
+								</div>
+							</a></li>
+							<li><a href="">
+								<div class="img_wrap">
+									<img src="images/download27.jpeg">
+									<span class="play_count"><span></span>40,363</span>
+								</div>
+								<div class="contents">
+									<strong class="webkit">
+								<em>국내야구 기타</em>[두산 청백전] 눈을 즐겁게 만드는 허경민의 좋은 수비
+									</strong>
+								</div>
+							</a></li>
+							<li><a href="">
+								<div class="img_wrap">
+									<img src="images/download14.jpeg">
+									<span class="play_count"><span></span>38,424</span>
+								</div>
+								<div class="contents">
+									<strong class="webkit">
+								<em>국내야구 기타</em>[NC 청백전] 권희동, 기선을 제압하는 선취 솔로포 /2회초
+									</strong>
+								</div>
+							</a></li>	
+						</ul>
+						<a class="more more_absol" href="">더보기<div class="icon"></div></a>
+					</div>
+					<div class="popnews">
+						<h3>많이 본 스포츠 뉴스</h3>
+						<ul class="text">
+							<li><a href="">
+								<em>1</em>손흥민 치솟는 주가, 메시가 뽑은'세계 최고의 재능 25인..
+							</a></li>
+							<li><a href="">
+								<em>2</em>타이거즈 개국공신 김봉연은 왜 영구결번이 아닌가
+							</a></li>
+							<li><a href="">
+							<em>3</em>'코로나 증상'레이나, "최악의 순간. 25분 동안 호흡 곤란...</a></li>
+							<li><a href="">
+							<em>4</em>[단독] 유일하게 뛰고 있는 한국 축구 선수 이야기</a></li>
+							<li><a href="">
+							<em>5</em>올림픽 연기 후 코로나 급증한 일본..육상 메달리스트도 양...</a></li>
+						</ul>
+						<a class="more more_absol" href="">더보기<div class="icon"></div></a>
+					</div>
+					<div class="visitsport">
+						<h3>내가 본 '스포츠'</h3>
+						<a class="fold_btn" href=""><span>접기</span></a>
+						<!-- <p>아직 본 글이 없습니다.</p>
+						<ul>
+							<li><a href=""><em>내가 본 글 끄기</em></a></li>
+							<li><a href=""></a><em>전체삭제</em></a></li>
+						</ul> -->
+					</div>						
+				</div>
+			</div>
+			<div class="page">
+					<span>7 / 15</span>
+						<a class="page_btn prev" href=""><span>이전</span></a>
+						<a class="page_btn next" href=""><span>다음</span></a>
+			</div>
+		</main>
+		<script>
+			// function javascript(){
+			// 	document.getElementsByClassName("on").style.borderBottom = "2px solid #000000";
+			// }
+		</script>
+		<footer>
+				<ul class="foot_list">
+					<li><a href="">로그인</a></li>
+					<li><a href="">내정보</a></li>
+					<li><a href="">PC화면</a></li>
+					<li><a href="">전체보기</a></li>
+				</ul>
+				<div class="foot_info">
+					<ul class="foot_policy">
+						<li><a href="">이용약관</a></li>
+						<li><a href=""><em>개인정보처리방침</em></a></li>
+						<li><a href="">비즈니스</a></li>
+						<li><a href="">고객센터</a></li>
+					</ul>
+					<a class="foot_corp">ⓒ Kakao Corp.</a>
+				</div>
+		</footer>
+	</div>
+<!-- <img src="비교.png" style="position:absolute; top:0px; left:0px; opacity: 0.5; z-index:2000;"> -->
+</html>
+</body>
